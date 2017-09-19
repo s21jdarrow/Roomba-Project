@@ -5,15 +5,11 @@ task main()
 {
 	// creating  a verible
 	int Bspeed = 10 ;
-	int Cspeed = 5;
+	int Cspeed = -10;
 
-	while(Bspeed <= 100)
+	while(Cspeed <= 90)
 	{
-		if(SensorValue(button1)==1)
-		{
-			Bspeed=110;
-			Cspeed=110;
-		}
+
 		// using the varible
 		motor[motorB] = Bspeed;
 		motor[motorC] = Cspeed;
