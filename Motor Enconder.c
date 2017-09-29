@@ -4,20 +4,26 @@
 
 task main()
 {
-	int degrees = getMotorEncoder(motorB);
-	while( degrees <1800)
+
+	while(getMotorEncoder(motorB) <1800)
 	{
 		motor[motorB] = 100;
 		motor[motorC] = 100;
-
-		if(degrees > 1800)
-		{
-			motor[motorB] = 0;
-			motor[motorC] = 0;
-			wait1Msec(5000);
-
-		}
-
 	}
+
+
+		motor[motorB] = 0;
+		motor[motorC] = 0;
+		wait1Msec(5000);
+		motor[motorB] = -50;
+		motor[motorC] = 50;
+		wait1Msec(800);
+		motor[motorB] = 100;
+		motor[motorC] = 100;
+		wait1Msec(5000);
+
+
+
+
 
 }
